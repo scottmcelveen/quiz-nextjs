@@ -1,29 +1,24 @@
-import { AmplifyAuthenticator, AmplifySignIn, AmplifySignUp } from '@aws-amplify/ui-react';
 import React from 'react';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import ProTip from '../src/ProTip';
+import Link from '../src/Link';
+import Copyright from '../src/Copyright';
 
-export default function Signin() {
+export default function Index() {
   return (
-    // <SignInSide></SignInSide>
-    <AmplifyAuthenticator usernameAlias="email">
-      <AmplifySignUp
-        slot="sign-up"
-        usernameAlias="email"
-        formFields={[
-          {
-            type: "email",
-            label: "Email",
-            placeholder: "email",
-            required: true,
-          },
-          {
-            type: "password",
-            label: "Password",
-            placeholder: "password",
-            required: true,
-          }
-        ]} 
-      />
-      <AmplifySignIn slot="sign-in" usernameAlias="email" />
-    </AmplifyAuthenticator>
+    <Container maxWidth="sm">
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Next.js with TypeScript example
+        </Typography>
+        <Link href="/admin" color="secondary">
+          Go to the admin portal
+        </Link>
+        <ProTip />
+        <Copyright />
+      </Box>
+    </Container>
   );
 }
