@@ -4,6 +4,10 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
+import Amplify from 'aws-amplify';
+import awsconfig from '../src/aws-exports';
+
+Amplify.configure(awsconfig);
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;

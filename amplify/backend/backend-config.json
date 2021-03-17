@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "quiznextjs68697301": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
