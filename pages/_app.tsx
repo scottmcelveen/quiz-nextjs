@@ -5,8 +5,9 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import Amplify from 'aws-amplify';
-import awsconfig from '../src/aws-exports';
+import awsconfig from '../src/aws-exports-env';
 
+console.log(awsconfig);
 Amplify.configure({...awsconfig, ssr: true});
 
 export default function MyApp(props: AppProps) {
